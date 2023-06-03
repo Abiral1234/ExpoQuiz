@@ -17,61 +17,65 @@ class _FirstPageState extends State<FirstPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        fit: StackFit.expand,
-        children: <Widget>[
-          Image.asset(
-            'background.png', // Replace with your image path
-            fit: BoxFit.cover,
-          ),
-          Center(
-            child: Text(
-              ' 9th GCES IT Expo \n Quiz Competition',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 90.0,
-                fontFamily: 'sans',
-              ),
-              textAlign: TextAlign.center,
+      backgroundColor: Color(0xFF001C42),
+      body: Padding(
+        padding: const EdgeInsets.all(15.0),
+        child: Stack(
+          fit: StackFit.expand,
+          children: <Widget>[
+            Image.asset(
+              'background.png', // Replace with your image path
+              fit: BoxFit.cover,
             ),
-          ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    SizedBox(
-                      width: 300,
-                    ),
-                    Text(
-                      'Gandaki College of Engineering and Science',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 30.0,
-                        fontFamily: 'sans',
-                      ),
-                    ),
-                    Center(
-                      child: Padding(
-                        padding: EdgeInsets.fromLTRB(100, 0, 0, 0),
-                        child: CircularButton(),
-                      ),
-                    ),
-                    SizedBox(
-                      width: 20,
-                    ),
-                  ],
+            Center(
+              child: Text(
+                ' 9th GCES IT Expo \n Quiz Competition',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 90.0,
+                  fontFamily: 'sans',
                 ),
+                textAlign: TextAlign.center,
               ),
-              SizedBox(
-                height: 50,
-              ),
-            ],
-          ),
-        ],
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SizedBox(
+                        width: 300,
+                      ),
+                      Text(
+                        'Gandaki College of Engineering and Science',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 30.0,
+                          fontFamily: 'sans',
+                        ),
+                      ),
+                      Center(
+                        child: Padding(
+                          padding: EdgeInsets.fromLTRB(100, 0, 0, 0),
+                          child: CircularButton(),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 50,
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -89,7 +93,6 @@ class CircularButton extends StatelessWidget {
       ),
       child: InkWell(
         onTap: () {
-          print("HELLO");
           Get.to(GeneralRound());
         },
         child: Icon(

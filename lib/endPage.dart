@@ -17,25 +17,29 @@ class _endPageState extends State<endPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        fit: StackFit.expand,
-        children: <Widget>[
-          Image.asset(
-            'background.png', // Replace with your image path
-            fit: BoxFit.cover,
-          ),
-          Center(
-            child: Text(
-              ' The END',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 90.0,
-                fontFamily: 'sans',
-              ),
-              textAlign: TextAlign.center,
+      backgroundColor: Color(0xFF001C42),
+      body: Padding(
+        padding: const EdgeInsets.all(15.0),
+        child: Stack(
+          fit: StackFit.expand,
+          children: <Widget>[
+            Image.asset(
+              'background.png', // Replace with your image path
+              fit: BoxFit.cover,
             ),
-          ),
-        ],
+            Center(
+              child: Text(
+                ' The END',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 90.0,
+                  fontFamily: 'sans',
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
